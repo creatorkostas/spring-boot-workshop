@@ -23,5 +23,7 @@ public class MatchService {
         return matchRepository.findAll();
     }
 
-    
+    public MatchEntity getMatchById(long id) {
+        return matchRepository.findById(id).orElse(null);
+    }
 }
